@@ -1,0 +1,553 @@
+@fontColor : #495057;
+@fontLightColor : #727272;
+@escapedColor: escape(@primary);
+@fontLabelColor: #656565;
+
+body:not(.popupBody) {
+    color: @fontLabelColor;
+    background-color: #f5f7fa;
+}
+body.embeded {
+    background-color: transparent;
+}
+header.navbar {
+    background-color: @primary;
+    background-image: linear-gradient(90deg,@primary,@lightPrimary);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+}
+header.navbar .header-nav {
+    background-color: transparent;
+}
+main .reset_position,
+main .grid-stack-item-header-action,
+a {
+    color: @accent;
+}
+.dataList table a {
+    color: darken(@accent, 5%);
+}
+.dataList table a:hover,
+a:focus, a:hover {
+    color: @lightAccent;
+}
+header.navbar a {
+    color: @defaultFontColor;
+}
+#header-name a {
+    padding: 7px 10px;
+    color: @defaultFontColor;
+}
+.hi-trigger:before {
+    background: @primary;
+}
+.line-wrap .line {
+    background-color: @defaultFontColor;
+}
+
+header.navbar .header-nav .nav>li>a .badge{
+    background: #E91B0C;
+    border-radius: 50%;
+}
+header.navbar .dropdown-menu a{ 
+    color: #000;
+}
+header.navbar .dropdown-menu .dropdown-menu-sub-footer {
+    color: #828282;
+}
+header.navbar .dropdown-menu a span.message, header.navbar .dropdown-menu a span.time {
+    color: #4C4C4C;
+}
+li.dropdown-menu-title {
+    border-bottom: 1px solid #F0F0F0;
+    color: #4C4C4C;
+}
+#sidebar {
+    background: white;
+    border-right: 1px solid #cfd8dc;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+#page > footer {
+    color: rgba(0,0,0,.65);
+}
+@media (max-width:1279px) {
+    #sidebar {
+        box-shadow: 0 0px 10px #0E1215
+    }
+    
+    body.horizontal_menu #sidebar #navigation > ul.user-menu.nav.nav-tabs.nav-stacked.main-menu{
+    display:block;
+    }
+}
+body#login #main > div {
+    background: white;
+}
+.breadcrumb,
+.breadcrumb a {
+    color: @fontLightColor;
+}
+.breadcrumb a:last-child {
+    color: @lightAccent;
+}
+body.horizontal_menu #sidebar a,.main-menu.nav-tabs>li.active>a, .main-menu.nav-tabs a.active{
+    color: @menuFont;
+    font-weight: 100;
+}
+
+#sidebar li ul li.active a, #sidebar li ul li.active a, .main-menu.nav-tabs .active>a{
+    color: @primary;
+}
+
+#sidebar li ul a:hover,.main-menu.nav-tabs a:hover, .main-menu.nav>li>a:hover, .main-menu.nav-tabs>li.active>a:hover{
+    color: @primary;
+}
+.main-menu.nav-tabs>li>a {
+    color: fade(@menuFont, 65%);
+}
+.main-menu.nav>li>a:focus, .main-menu.nav>li>a:hover,
+.main-menu.nav-tabs>li.active>a, .main-menu.nav-tabs>li>a:hover {
+    border-left: 5px solid transparent;
+}
+.main-menu.nav-tabs>li.active>a{
+    border-left: 5px solid @primary !important;
+    background: #fcfcfc;
+    color: @primary;
+}
+
+.main-menu.nav-tabs>li.active>ul{
+    border-left: 5px solid @primary !important;
+}
+
+.main-menu.nav-tabs > li.active > a.dropdown {
+    color: @primary;
+    border-left: 5px solid @primary;
+}
+
+.main-menu.nav-tabs > li.mm-profile a img {
+    box-shadow: 0 0 0 2px @profileFontColor;
+}
+.main-menu.nav-tabs > li.mm-profile a small{
+    color: @profileFontColor;
+}
+.main-menu.nav-tabs > li.mm-profile a small.login_link{
+    color:@accent;
+}
+
+#navigation > ul.user-menu.nav.nav-tabs.nav-stacked.main-menu > li > a > span{
+    color: @profileFontColor;
+}
+
+.main-menu.nav-tabs > li.mm-profile a{
+    color: @profileFontColor;
+}
+
+.main-menu.nav-tabs > li.mm-profile a:focus small.login_link, .main-menu.nav-tabs > li.mm-profile a:hover small.login_link {
+    color: @lightAccent;
+}
+#sidebar li ul a {
+    color: fade(@menuFont, 70%);
+}
+@media (min-width:768px) {
+    body.horizontal_menu #sidebar {
+        background-image: linear-gradient(90deg, @primary, @lightPrimary);
+    }
+    body.horizontal_menu.inline_menu #sidebar {
+        background: transparent;
+    }
+    body.horizontal_menu #sidebar .nav>li ul{
+        background: @primary;
+    }
+    body.horizontal_menu.inline_menu #sidebar .nav>li ul{
+        background: @primary;
+        border: 1px solid @primary;
+    }
+    body.horizontal_menu.inline_menu #sidebar .main-menu.nav-tabs>li.active>a{
+        box-shadow: 0 2px 0 0 @defaultFontColor;
+    }
+    body.horizontal_menu.inline_menu header.navbar .header-nav .nav>li.user-link img {
+        border: 2px solid fade(@defaultFontColor, 13%);
+    }
+    body.horizontal_menu #sidebar a,
+    body.horizontal_menu .main-menu.nav-tabs>li.active>a, body.horizontal_menu .main-menu.nav-tabs>li.active>a:hover,
+    body.horizontal_menu .main-menu.nav-tabs a.active, body.horizontal_menu .main-menu.nav-tabs a:hover {
+        color: @defaultFontColor;
+    }
+    body.horizontal_menu #sidebar li ul a:hover,body.horizontal_menu #sidebar li ul li.active a,
+    body.horizontal_menu #sidebar li ul li.active a,body.horizontal_menu .main-menu.nav-tabs .active>a{
+        color: @primary;
+    }
+    body.horizontal_menu .main-menu.nav>li>a:hover{
+        background: #eee;
+    }
+    body.horizontal_menu .main-menu.nav-tabs>li>a {
+        color: fade(@defaultFontColor, 65%);
+    }
+
+    body.horizontal_menu .main-menu.nav-tabs > li.mm-profile a img {
+        box-shadow: 0 0 0 2px fade(@defaultFontColor, 13%);
+    }
+    body.horizontal_menu .main-menu.nav-tabs > li.mm-profile a small{
+        color: fade(@defaultFontColor, 70%);
+    }
+    body.horizontal_menu #sidebar li ul a {
+        color: fade(@defaultFontColor, 70%);
+    }
+    
+    body.horizontal_menu #sidebar #navigation > ul.user-menu.nav.nav-tabs.nav-stacked.main-menu{
+        display: none;
+    }
+}
+body:not(#login).embeded #content > main > div:not(.quickEdit),
+body:not(#login).embeded #content > main > table{
+    background: transparent;
+}
+.page-loader {
+    background: @primary;
+}
+.page-loader .preloader p {
+    color: @defaultFontColor;
+}
+.preloader .plc-path, .plc-path {
+    stroke: @defaultFontColor;
+}
+.btn, .btn.focus, .btn:focus, .btn:hover, .btn:active {
+    color: @buttonText;
+    background-color: @button;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1.5px 1px transparent;
+    margin: 1px 0;
+}
+.btn.waves-input-wrapper{
+    color: @buttonText !important;
+    background-color: @button !important;
+}
+
+main .dataList th,
+main .dataList th a:hover,
+main .dataList th a{
+    color: @fontLabelColor;
+}
+
+body .dataList th,
+body .dataList th a:hover,
+body .dataList th a{
+    color: @fontLabelColor;
+}
+
+main .footable.breakpoint>tbody>tr>td>span.footable-toggle{
+    color: @primary;
+}
+main .dataList th.sortable:hover {
+    background-color: lighten(@darkPrimary , 1%);
+}
+main .dataList thead tr {
+    background-color: transparent;
+}
+main .dataList tr.odd, 
+main .dataList tr.odd + tr.footable-row-detail{
+    background-color: #f5f8f9;
+}
+main .dataList tr.tableRowEven, main .dataList tr.even,
+main .dataList tr.tableRowEven + tr.footable-row-detail, main .dataList tr.even + tr.footable-row-detail{
+    background-color: transparent;
+}
+main .dataList span.pagelinks a, main .dataList span.pagelinks strong, main .dataList span.pagelinks > span,
+body .dataList span.pagelinks a, body .dataList span.pagelinks strong, body .dataList span.pagelinks > span{
+    color: @accent;
+    margin: -1px;
+    //background-color: rgba(0,0,0,.05);
+}
+main .dataList span.pagelinks strong {
+    color: @fontColor;
+    //background-color: rgba(0,0,0,.05);
+}
+main .dataList .pagelinks .pc.first-disabled,
+main .dataList .pagelinks .pc.prev-disabled,
+main .dataList .pagelinks .pc.next-disabled,
+main .dataList .pagelinks .pc.last-disabled{
+    color: #dde6e9;
+    background-color: white; 
+}
+div[class*="-body-content"] div[class*="-body-header"] {
+    color: @fontColor;
+}
+main .jqplot-highlighter-tooltip, main .jqplot-canvasOverlay-tooltip {
+    color: #000;
+}
+main ::-webkit-input-placeholder{
+    color: @fontLightColor;
+}
+main :-moz-placeholder{
+    color: @fontLightColor;
+}
+main ::-moz-placeholder{
+    color: @fontLightColor;
+}
+main :-ms-input-placeholder{
+    color: @fontLightColor;
+}
+main .filter-cell select.emptyValue {
+    color: @fontLightColor !important;
+}
+main input:not([type]),
+main input[type=text],
+main input[type=password],
+main input[type=email],
+main input[type=url],
+main input[type=time],
+main input[type=date],
+main input[type=datetime],
+main input[type=datetime-local],
+main input[type=tel],
+main input[type=number],
+main input[type=search],
+main textarea,
+main select:not([class^=ui]){
+    color: @fontColor;
+}
+main input:not([type]):focus:not([readonly]),
+main input[type=text]:focus:not([readonly]),
+main input[type=password]:focus:not([readonly]),
+main input[type=email]:focus:not([readonly]),
+main input[type=url]:focus:not([readonly]),
+main input[type=time]:focus:not([readonly]),
+main input[type=date]:focus:not([readonly]),
+main input[type=datetime]:focus:not([readonly]),
+main input[type=datetime-local]:focus:not([readonly]),
+main input[type=tel]:focus:not([readonly]),
+main input[type=number]:focus:not([readonly]),
+main input[type=search]:focus:not([readonly]),
+main textarea:focus:not([readonly]),
+main select:focus:not([readonly]):not([class^=ui]),
+main input.focus,
+main .ql-container.ql-bubble.focus{
+    border: 1px solid @primary;
+    box-shadow: 0px 0px;
+}
+
+main select:not([class^="ui-"]):not([multiple]) {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='@{escapedColor}' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'/%3E%3C/svg%3E");
+}
+main input:-webkit-autofill, main textarea:-webkit-autofill, main select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    -webkit-text-fill-color: @fontColor !important;
+}
+main input:focus:-webkit-autofill, main textarea:focus:-webkit-autofill, main select:focus:-webkit-autofill {
+    -webkit-box-shadow: 0 1px 0 0 @primary, 0 0 0px 1000px #fff inset !important;
+}
+main #form-canvas .label {
+    color: @fontLabelColor;
+}
+main .subform-container.has-frame .subform-title {
+    background: #fff;
+}
+main .subform-container {
+    border: 2px solid #dde6e9;
+}
+main .chosen-container-multi .chosen-choices,
+main .chosen-container-single .chosen-single {
+    background-color: transparent;
+    background: transparent;
+    color: inherit;
+}
+main .chosen-container-single.chosen-with-drop .chosen-single {
+    color: #000;
+}
+main .chosen-container-multi.chosen-container-active .chosen-choices,
+main .chosen-container-active .chosen-single {
+    border: 1px solid @formElementColor;
+    box-shadow: 0px 0px;
+}
+
+main .multiPagedForm.wizard .page-nav-panel ul,
+main .multiPagedForm.tab .page-nav-panel ul {
+    box-shadow: inset 0 -2px 0 0 screen(@primary, #555555);
+}
+main .multiPagedForm.wizard .page-nav-panel .nav_item.current button,
+main .multiPagedForm.wizard .page-nav-panel .nav_item button,
+main .multiPagedForm.tab .page-nav-panel .nav_item.current button,
+main .multiPagedForm.tab .page-nav-panel .nav_item button {
+    color: screen(@primary, #555555);
+}
+main .multiPagedForm.wizard .page-nav-panel .nav_item.current button:disabled, main .multiPagedForm.tab .page-nav-panel .nav_item.current button:disabled, main .multiPagedForm.wizard .page-nav-panel .nav_item.current button, main .multiPagedForm.tab .page-nav-panel .nav_item.current button {
+    color: @darkPrimary;
+}
+main .multiPagedForm.wizard .page-nav-panel .nav_item.current:after, main .multiPagedForm.tab .page-nav-panel .nav_item.current:after {
+    background: @darkPrimary;
+}
+@media (max-width: 767px){
+    main .multiPagedForm.wizard .page-nav-panel .nav_item button, main .multiPagedForm.tab .page-nav-panel .nav_item button {
+        background: none;
+        border: solid 0px;
+    }
+    main .multiPagedForm.wizard .page-nav-panel .nav_item.current, main .multiPagedForm.tab .page-nav-panel .nav_item.current {
+        border: 0px solid @darkPrimary;
+        margin-right: 0px;
+    }
+    main .multiPagedForm .page-container {
+        border: 0px solid @darkPrimary;
+    }
+}
+main .form-cell .grid thead tr, main .subform-cell .grid thead tr {
+    background: #999;
+    color: @defaultFontColor;
+}
+main .form-cell .grid tbody tr:nth-child(odd), main .subform-cell .grid tbody tr:nth-child(odd) {
+    background-color: #f5f8f9;
+}
+main .form-cell .grid table.tablesaw, main .subform-cell .grid table.tablesaw{
+    border-bottom: 1px solid #999;
+}
+main .grid-stack-item .grid-stack-item-header {
+    background: @darkPrimary;
+}
+main .grid-stack-item .grid-stack-item-header h4 {
+    color: @defaultFontColor;
+}
+main .grid-stack-item .grid-stack-item-content {
+    border-color: transparent;
+}
+body.popupBody #main-body-header {
+    background: @darkPrimary;
+    color: @defaultFontColor;
+}
+
+body .form-cell .grid table.tablesaw, body .subform-cell .grid table.tablesaw{
+    border-bottom: 0px solid #999;
+}
+
+.mm-profile .user-link .toggled{
+    border-left: 5px solid #23b7e5;
+}
+
+body .form-cell .grid thead tr, body .subform-cell .grid thead tr {
+    background: #fff;
+    color: #888;
+}
+
+.form-cell .tablesaw-stack tbody tr, .subform-cell .tablesaw-stack tbody tr {
+    border-bottom: 0;
+    border-top: 1px solid #e4dede;
+}
+
+.pq-grid span.pq-grid-header{
+    background: @primary !important;
+}
+
+.pq-grid div.pq-header-outer{
+    background: @primary !important;
+}
+
+.pq-grid-toolbar .ui-button {
+    background: @primary;
+    border: 1px solid @primary !important;
+}
+
+.fc-day-header{
+    background: @primary;
+    color: @defaultFontColor;
+    font-size: 1.5rem;
+}
+
+body .dataList span.pagelinks strong, main .dataList span.pagelinks strong {
+    border: 1px solid @button !important;
+    background-color: @button !important;
+    color: white;
+}
+
+body input:not([type]):focus:not([readonly]),
+body input[type=text]:focus:not([readonly]),
+body input[type=password]:focus:not([readonly]),
+body input[type=email]:focus:not([readonly]),
+body input[type=url]:focus:not([readonly]),
+body input[type=time]:focus:not([readonly]),
+body input[type=date]:focus:not([readonly]),
+body input[type=datetime]:focus:not([readonly]),
+body input[type=datetime-local]:focus:not([readonly]),
+body input[type=tel]:focus:not([readonly]),
+body input[type=number]:focus:not([readonly]),
+body input[type=search]:focus:not([readonly]),
+body textarea:focus:not([readonly]),
+body select:focus:not([readonly]):not([class^=ui]),
+body input.focus,
+body .editor-cell input:not([type]):focus:not([readonly]),
+body .editor-cell input[type=text]:focus:not([readonly]),
+body .editor-cell input[type=password]:focus:not([readonly]),
+body .editor-cell input[type=email]:focus:not([readonly]),
+body .editor-cell input[type=url]:focus:not([readonly]),
+body .editor-cell input[type=time]:focus:not([readonly]),
+body .editor-cell input[type=date]:focus:not([readonly]),
+body .editor-cell input[type=datetime]:focus:not([readonly]),
+body .editor-cell input[type=datetime-local]:focus:not([readonly]),
+body .editor-cell input[type=tel]:focus:not([readonly]),
+body .editor-cell input[type=number]:focus:not([readonly]),
+body .editor-cell input[type=search]:focus:not([readonly]),
+body .editor-cell textarea:focus:not([readonly]),
+body .editor-cell select:focus:not([readonly]):not([class^=ui]),
+body .editor-cell input.focus{
+    border: 1px solid @formElementColor;
+    box-shadow: 0px 0px;
+}
+
+.user-menu{
+    background: @profileBackgroundImage;
+    background-size: 268px 123px;
+    background-repeat: no-repeat;
+}
+
+body.horizontal_menu #sidebar .nav>li:hover ul{
+    display:block  !important;
+    background: white !important;
+    border: 1px solid @primary;
+}
+
+
+
+.dataList table a.waves-button {
+    color: @defaultFontColor;
+}
+
+body .select_checkbox label > [type="checkbox"]:hover + i:after,
+body label > input[type=checkbox]:hover + i:after{
+    border: 1px solid @formElementColor;
+}
+
+body .select_radio label > input[type="radio"]:hover + i:after,
+body label > input[type="radio"]:hover + i:after{
+    border: 1px solid @formElementColor;
+}
+
+body .select_radio label > input[type="radio"]:checked + i:after,
+body label > input[type="radio"]:checked + i:after {
+    color: @formElementColor;
+    border-color: @formElementColor;
+    box-shadow: 0 0 0 0.2rem fade(@formElementColor, 30%);;
+}
+
+body .select_checkbox label > [type="checkbox"]:checked + i:after,
+body label > input[type=checkbox]:checked + i:after {
+    background-color: @formElementColor;
+    border: 1px solid @formElementColor;
+    box-shadow: 0 0 0 0.2rem fade(@formElementColor, 30%);;
+}
+
+body .grid-action-add:after{
+    background-color: @button;
+    border: 1px solid @button;
+}
+
+body .chosen-container-multi .chosen-choices li.search-choice, body .chosen-container-single .chosen-single{
+    color: @fontColor;
+}
+
+.form-cell-value label, .subform-cell-value label{
+    color: @fontColor;
+}
+
+.badge{
+    background-color: @rowCountBackgroundColor;
+}
+
+.activeFont {
+    color: @buttonText !important;
+    background-color: @button !important;
+}
