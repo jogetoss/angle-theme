@@ -81,7 +81,7 @@
         imageSize : 'width:268px;height:123px;'
     },{
         name : 'fontControl',
-        label : '@@theme.universal.fontControl@@',
+        label : '@@theme.angle.fontControl@@',
         type : 'checkbox',
         options : [{
             value : 'true',
