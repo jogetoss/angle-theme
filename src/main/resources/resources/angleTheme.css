@@ -373,7 +373,7 @@ body.has_home_banner #main{
 body.embeded #main, body.embeded.has_home_banner #main {
     margin-top:0px;
     padding-bottom: 0;
-    padding-top: 0;
+    padding-top: 0 !important;
     min-height: auto;
 }
 
@@ -899,8 +899,8 @@ body#login #page > footer {
         background: #f5f7fa;
     } 
     body.embeded div#content{
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
         background: #fff;
     }
     body.horizontal_menu #sidebar {
